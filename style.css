@@ -1,14 +1,13 @@
 *,
 ::before,
 ::after
-{
+    {
     box-sizing: border-box;
-   
-}
+    }
 body{
     margin: 0;
     font-family: "Roboto", sans-serif;
-}
+    }
 header{
     font-family: "Shrikhand",cursive;
     text-align: center;
@@ -16,7 +15,7 @@ header{
     padding: 2px;
     margin: 0;
     position: relative;
-}
+    }
 main .city{
     display: flex;
     align-items: center;
@@ -25,9 +24,34 @@ main .city{
     font-size: 16px;
     background-color: #EAEAEA;
     text-align: center;
-    padding:2px;  
-}
+    }
 main .city i{
-    font-size: 20px;
+    font-size: 18px;
+    }
+ /***** Explorer ******/
+.explorer{
+        text-align: center;
+    }
+.explorer h2{
+     margin-top: 39px;
+    font-size: 24px;
+     }
+.explorer p{
+        font-size: 18px;
+     }
+.explorer button{
+        background: linear-gradient(to top, #9356DC, #FF79DA);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border: none;
+        border-radius: 25px;   
+        color:#FFFFFF;
+        font-weight: 500;
+        font-size: 16px;
+        padding:16px 25px;
+        margin-top: 27px;
+     }
+.explorer button:hover{
+    transform: scale(1.02);
+    opacity: 0.9;
+    border:2px solid blueviolet
 }
-

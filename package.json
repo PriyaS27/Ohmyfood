@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Myproject4 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriyaS27/ohmyfood.git"
+  },
+  "author": "PriyaS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriyaS27/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/PriyaS27/ohmyfood#readme",
+  "devDependencies": {
+    "sass": "^1.62.1"
+  }
+}
