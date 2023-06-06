@@ -7,12 +7,27 @@
 }
 body{
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 header{
-    font-family: 'Shrikhand',cursive;
+    font-family: "Shrikhand",cursive;
     text-align: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    padding: 4px;
+    padding: 2px;
+    margin: 0;
+    position: relative;
 }
-
+main .city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:17px;
+    font-size: 16px;
+    background-color: #EAEAEA;
+    text-align: center;
+    padding:2px;  
+}
+main .city i{
+    font-size: 20px;
+}
 
