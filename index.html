@@ -14,23 +14,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap" rel="stylesheet">
     <!-- Font icon -->
     <script src="https://kit.fontawesome.com/95c76497d8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css"> 
+    <!-- file css -->
+    <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
     <header>
-        <h1>Ohmyfood</h1>
+        <img class="logo" src="image/ohmyfood@2x.svg" alt="logo of ohmyfood">
     </header>
     <main>
         <!-- Heading -->
         <div class="city">
-            <i class="fa-sharp fa-solid fa-location-dot"></i>
-            <h3>Paris, Belleville</h3>
+           <span><i class="fa-sharp fa-solid fa-location-dot"></i></span>
+            <input type="search" name="city" value="Paris, Belleville" placeholder="Votre ville"></input>
         </div>
         <!-- Explore section -->
         <section class="explorer">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <div class="expl_btn"><button>Explorer nos restaurants</button></div>
+        </section>
+        <!-- Fonction -->
+        <section class="tuto">
+            <h2>Fonctionnement</h2>
+            <ol>
+                <li>Choisissez un restaurant</li>
+                <li>Composez votre menu</li>
+                <li>Dégustez au restaurant</li>
+            </ol>
         </section>
     </main>
 </body>

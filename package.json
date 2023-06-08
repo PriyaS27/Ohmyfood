@@ -1,7 +1,7 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "Myproject openclassroom ohmyfood",
+  "description": "openclassroom project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,13 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/PriyaS27/ohmyfood.git"
   },
-  "author": "Spriya",
+  "author": "Priya",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/PriyaS27/ohmyfood/issues"
   },
   "homepage": "https://github.com/PriyaS27/ohmyfood#readme",
   "dependencies": {
-    "sass": "^1.62.1"
+    "sass": "^1.63.2"
   }
 }

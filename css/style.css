@@ -1,57 +1,83 @@
-*,
-::before,
-::after
-    {
-    box-sizing: border-box;
-    }
-body{
-    margin: 0;
-    font-family: "Roboto", sans-serif;
-    }
-header{
-    font-family: "Shrikhand",cursive;
-    text-align: center;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    padding: 2px;
-    margin: 0;
-    position: relative;
-    }
-main .city{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:17px;
-    font-size: 16px;
-    background-color: #EAEAEA;
-    text-align: center;
-    }
-main .city i{
-    font-size: 18px;
-    }
- /***** Explorer ******/
-.explorer{
-        text-align: center;
-    }
-.explorer h2{
-     margin-top: 39px;
-    font-size: 24px;
-     }
-.explorer p{
-        font-size: 18px;
-     }
-.explorer button{
-        background: linear-gradient(to top, #9356DC, #FF79DA);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border: none;
-        border-radius: 25px;   
-        color:#FFFFFF;
-        font-weight: 500;
-        font-size: 16px;
-        padding:16px 25px;
-        margin-top: 27px;
-     }
-.explorer button:hover{
-    transform: scale(1.02);
-    opacity: 0.9;
-    border:2px solid blueviolet
+@import "//scss/style.scss";
+@import "//scss/base.scss";
+main .city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #EAEAEA;
+  text-align: center;
 }
+main .city input {
+  border: none;
+  background-color: #EAEAEA;
+  text-align: center;
+  width: 150px;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 15px 15px 15px;
+  margin-top: 5px;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+  position: relative;
+}
+
+.explorer {
+  text-align: center;
+}
+.explorer h2 {
+  margin-top: 39px;
+  font-size: 24px;
+}
+.explorer p {
+  font-size: 18px;
+}
+.explorer button {
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 25px;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 16px 25px;
+  margin-top: 27px;
+}
+.explorer button:hover {
+  transform: scale(1.02);
+  transition: all 80ms ease-in;
+  opacity: 0.9;
+}
+
+.tuto {
+  margin-top: 57px;
+}
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  background-color: #f7f7f7;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+
+/*# sourceMappingURL=style.css.map */
