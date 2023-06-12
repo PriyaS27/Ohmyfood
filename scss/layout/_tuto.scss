@@ -1,26 +1,49 @@
-@import  "../utils/zoom.scss";
+@import  "../utils/_zoom.scss";
+@import  "../utils/_variables.scss";
+
 
 .tuto  {
- 
- margin-top: 57px;
+    counter-reset: steps;
+
     & ol{
+        list-style-type: none;
         display: flex;
-        flex-wrap: wrap;
-        gap:1rem;
-        @media (max-width:800px) {
+        gap:2rem;
+        padding:0 20px 0 32px;
+        @media (max-width:1000px) {
             flex-direction: column;
-            
-        }
+                }
     }
     & li{
-        
+        position: relative;
+       &::before{
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        background-color:#9356DC;
+        width: 2 * $tuto-height;
+        height: 2 * $tuto-height;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        bottom: $tuto-height;;
+        left: -$tuto-height;;
+
+       }
         background-color: #f7f7f7;
-        padding: 1rem 2rem;
+        padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 20px;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        
      &:hover{
         @include zoom;
+     }
+     & i.fa-solid{
+        margin-right: 1rem;
+        color:#7E7E7E;
+        font-size: 1.2rem;
      }
     }
 }

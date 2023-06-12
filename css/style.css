@@ -1,5 +1,16 @@
 @import "//scss/style.scss";
-@import "//scss/base.scss";
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 main .city {
   display: flex;
   align-items: center;
@@ -12,7 +23,7 @@ main .city input {
   border: none;
   background-color: #EAEAEA;
   text-align: center;
-  width: 150px;
+  width: 200px;
   font-size: 1em;
   font-weight: bold;
   padding: 15px 15px 15px 15px;
@@ -57,27 +68,48 @@ header {
 }
 
 .tuto {
-  margin-top: 57px;
+  counter-reset: steps;
 }
 .tuto ol {
+  list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 0 20px 0 32px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .tuto ol {
     flex-direction: column;
   }
 }
 .tuto li {
+  position: relative;
   background-color: #f7f7f7;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
 .tuto li:hover {
   transform: scale(1.02);
+}
+.tuto li i.fa-solid {
+  margin-right: 1rem;
+  color: #7E7E7E;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
