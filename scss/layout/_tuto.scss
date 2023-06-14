@@ -1,10 +1,14 @@
 @import  "../utils/_zoom.scss";
 @import  "../utils/_variables.scss";
 
-
 .tuto  {
     counter-reset: steps;
-
+    & h2{
+        font-weight: 700;
+        font-size: 24px;
+        padding-left: 20px;
+        margin-top: 48px;
+    }
     & ol{
         list-style-type: none;
         display: flex;
