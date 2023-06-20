@@ -1,5 +1,6 @@
-@import  "../utils/_zoom.scss";
+@import  "../utils/_mixins.scss";
 @import  "../utils/_variables.scss";
+@import  "../utils/colors";
 
 .tuto  {
     counter-reset: steps;
@@ -20,11 +21,13 @@
     }
     & li{
         position: relative;
+        display: flex;
+        align-items: center;
        &::before{
         content: counter(steps);
         counter-increment: steps;
         color: white;
-        background-color:#9356DC;
+        background-color:$first-color;
         width: 2 * $tuto-height;
         height: 2 * $tuto-height;
         display: grid;
@@ -43,6 +46,10 @@
         
      &:hover{
         @include zoom;
+        background-color: lighten($first-color, 35%);
+        i::before{
+            color: $first-color;
+        }
      }
      & i.fa-solid{
         margin-right: 1rem;

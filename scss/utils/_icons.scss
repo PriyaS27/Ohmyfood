@@ -1,0 +1,33 @@
+@mixin heart{
+  @include fontawesome;
+    content: "\f004";
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    // top: 0%;
+    margin-right: 22px;
+    padding-top: 0.6rem;
+    color: inherit;
+    @include gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+    
+}
+@mixin heart-animated{
+&::before{
+  @include heart;
+}
+&::after{
+  @include heart;
+  @include gradient;
+  opacity: 0;
+  color: transparent;
+  font-weight: 900;
+}
+&:hover::after {
+  opacity: 1; 
+  transform: translateY(-5%) scale(1.2);
+}
+}

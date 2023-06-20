@@ -1,18 +1,26 @@
 @import  "../utils/_variables.scss";
+@import  "../utils/_mixins.scss";
 
-.menus{
+#homepage{
+
+  .menus{
     background-color: #f7f7f7;
+    margin-bottom: 2rem;
+    padding: 0 14px;
+    
+    
     & h2{
       font-weight: 700;
       font-size: 24px;
       padding-left: 20px;
       margin-top: 48px;
+      padding: 54px 20px 0;
       
     }
     .menus__cards{
-        display: grid;
-       grid-template-columns:repeat(2, 1fr) ;
-        gap: 2rem;
+      display: grid;
+      grid-template-columns:repeat(2, 1fr) ;
+      gap: 2rem;
       @media (max-width: $breakpoint) {
         grid-template-columns:repeat(1, 1fr) ;
       }
@@ -22,7 +30,7 @@
       .new::before {
         content:"Nouveau";
         position: absolute;
-        background-color:#99E2D0;
+        background-color:$color-tertiary;
         color:#008766;
         width: 80px;
         height: 29px;
@@ -32,48 +40,51 @@
         place-items: center;
         right: 1rem;
         top: 1rem;
-
+        
       }
     }
     .card{
         &__image{
-        height: 14rem;
-        background-size: cover;
-         border-radius: 1rem 1rem 0 0; 
-         
-      }
-      &__image-1{
-        background-image: url("/image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+          height: 14rem;
+          background-size: cover;
+          background-position: center;
+          border-radius: 1rem 1rem 0 0; 
+          
+        }
+        &__image-1{
+          background-image: url("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
       }
       &__image-2{
-        background-image: url("/image/stil-u2Lp8tXIcjw-unsplash.jpg");
+        background-image: url("../image/stil-u2Lp8tXIcjw-unsplash.jpg");
         background-position: center;
       }
       &__image-3{
-        background-image: url("/image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+        background-image: url("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
         
       }
       &__image-4{
-        background-image: url("/image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+        background-image: url("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
       }
       &__description {
         position: relative;
+        background-color: white;
+        border-radius: 0 0 1rem 1rem;
+        @include heart-animated;
         p{
-          margin: 5px 13px 12px; 
+          padding: 5px 13px 12px;
+          // margin: 5px 13px 12px; 
         font-weight: 300;
         font-size: 17px;
-         }
-          h3{
-           margin: 14px 13px 0; 
+        // padding: 0.3rem;
+        
+      }
+      h3{
+        
+        margin: 0 22px 5px 13px; 
            font-size: 18px;
-            }
-        i{
-          font-size: 1.5rem;
-          position: absolute;
-          right: 1rem;
-           top: 0%;
+           padding-top: 1rem;
+          }
         }
-
       }
     }
-}
+  }
