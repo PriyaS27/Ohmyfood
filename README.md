@@ -1,21 +1,21 @@
 ---
 
-#Ohmyfood
+# Ohmyfood
 
 ---
 
-#Objectif
+# Objectif
 
 Dynamiser une page web avec des animations CSS
 
 ---
-#Scénario
+# Scénario
 
 Troisième projet de la formation "Intégrateur Web" chez OpenClassroom.Le site Ohmyfood! est une resturant de commande de repas en ligne.Le concept permet aux utilisateurs de composer leur menu en avance parmi 4 restaurants parisiens
 
 ---
 
-#Animations demandées
+# Animations demandées
 
 * Loading spinner au chargement de l'index
 * Style des boutons au survol
