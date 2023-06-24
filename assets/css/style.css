@@ -132,7 +132,7 @@ header {
   gap: 2rem;
   padding: 0 20px 0 32px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .tuto ol {
     flex-direction: column;
   }
@@ -194,7 +194,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   #homepage .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -222,23 +222,18 @@ header {
   background-position: center;
   border-radius: 1rem 1rem 0 0;
 }
-@media screen and (min-width: 1024px) {
-  #homepage .menus .card__image {
-    height: 24rem;
-  }
-}
 #homepage .menus .card__image-1 {
-  background-image: url("../assets/image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-image: url("../image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 #homepage .menus .card__image-2 {
-  background-image: url("../assets/image/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-image: url("../image/stil-u2Lp8tXIcjw-unsplash.jpg");
   background-position: center;
 }
 #homepage .menus .card__image-3 {
-  background-image: url("../assets/image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-image: url("../image/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 #homepage .menus .card__image-4 {
-  background-image: url("../assets/image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-image: url("../image/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 #homepage .menus .card__description {
   position: relative;
@@ -257,9 +252,8 @@ header {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 0%;
   margin-right: 22px;
-  padding-top: 0.9rem;
+  padding-top: 0.6rem;
   color: inherit;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
@@ -279,9 +273,8 @@ header {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 0%;
   margin-right: 22px;
-  padding-top: 0.9rem;
+  padding-top: 0.6rem;
   color: inherit;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
@@ -313,37 +306,19 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
-footer .footer__title {
+footer h2 {
   font-family: "Shrikhand";
   font-style: italic;
-  font-weight: 500;
-  font-size: 18px;
-  margin: 0 16px 16px 0;
-}
-footer .footer__list {
-  padding: 0.3rem;
-  font-family: "Roboto";
-  font-size: 16px;
   font-weight: 400;
-  list-style-type: none;
+  font-size: 18px;
+  margin: 0 0 16px;
 }
-footer .fa-solid {
-  margin-right: 0.5rem;
+footer p {
+  padding: 0.2rem;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-@media screen and (min-width: 1024px) {
-  .footer__title {
-    position: absolute;
-    right: 0;
-    margin-right: 50px;
-    margin-top: 17px;
-  }
-  .footer__list {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-  }
-}
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -351,6 +326,9 @@ footer .fa-solid {
   100% {
     transform: scale(1);
   }
+}
+#page-resto {
+  background-color: #f6f6f6;
 }
 #page-resto header::before {
   display: inline-block;
@@ -378,12 +356,6 @@ footer .fa-solid {
 #page-resto .resto__title {
   position: relative;
 }
-@media screen and (min-width: 1024px) and (max-width: 1024px) {
-  #page-resto .resto__title {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
 #page-resto .resto__title h2 {
   font-family: "Shrikhand";
   font-style: italic;
@@ -406,7 +378,6 @@ footer .fa-solid {
   position: absolute;
   content: "\f004";
   font-size: 1.5rem;
-  position: absolute;
   right: 1rem;
   margin-right: 22px;
   padding-top: 0.6rem;
@@ -428,7 +399,6 @@ footer .fa-solid {
   position: absolute;
   content: "\f004";
   font-size: 1.5rem;
-  position: absolute;
   right: 1rem;
   margin-right: 22px;
   padding-top: 0.6rem;
@@ -448,20 +418,12 @@ footer .fa-solid {
   transform: translateY(-5%) scale(1.2);
 }
 #page-resto .resto-main {
-  background-color: #f6f6f6;
   padding: 0 1rem;
-}
-@media screen and (min-width: 1024px) and (max-width: 1024px) {
-  #page-resto .resto-main {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
 }
 #page-resto h3 {
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
-  margin-top: 0;
 }
 #page-resto h3::after {
   content: "";
@@ -476,9 +438,8 @@ footer .fa-solid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  margin-bottom: 8px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   #page-resto .menus {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -496,7 +457,7 @@ footer .fa-solid {
   display: flex;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
 }
 #page-resto .menus .menus__category .menu-item.delay-1 {

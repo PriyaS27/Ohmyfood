@@ -1,10 +1,10 @@
 @import  "../utils/_animation.scss";
 @import  "../utils/_mixins.scss";
+@import "../utils/_icons.scss";
 
 
 #page-resto{
-
-    background-color: $lighter-grey;
+     
     header{
             &::before{
             @include fontawesome;
@@ -16,7 +16,6 @@
             top: 50%;
             transform: translateY(-50%);
         }
-
     }
     .banner img
     {
@@ -28,9 +27,15 @@
     }
     .resto__title 
     {
-        position: relative;
-    h2{
         
+        position: relative;
+        @include desktop{
+        @media screen and (max-width: 1024px){
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        }
+    h2{
         font-family: 'Shrikhand';
         font-style: italic;
         font-weight: 400;
@@ -45,13 +50,20 @@
     }
     .resto-main
     {
-       padding: 0 1rem;
-        // margin: -10px 15px 0 15px;
+        background-color: $lighter-grey;
+        padding: 0 1rem;
+        @include desktop{
+        @media screen and (max-width: 1024px){
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        }
     }
     h3{
         text-transform: uppercase;
         font-weight: 300;
         position: relative;
+         margin-top: 0;
         &::after {
             content: "";
             position: absolute;
@@ -67,6 +79,7 @@
         display: grid;
         grid-template-columns:repeat(3, 1fr);
         gap: 1rem;
+        margin-bottom: 8px;
        @media (max-width: $breakpoint) {
         grid-template-columns:repeat(1, 1fr) ;
         }  
@@ -89,11 +102,9 @@
                 display: flex;
                 border-radius: 1rem;
                 overflow: hidden;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
                 background-color: white;
                 //for animation
-                   
-
             .menu-item__price {
                  margin-left: auto; 
                 font-weight: 700;
@@ -140,12 +151,9 @@
                     animation: quarterspin 0.5s  ease-in-out;
                  }
                  }
-
       }
     }
 }
-
-        
     section.order{
         height: 25vh;
         display: grid;
@@ -155,7 +163,4 @@
         }
     }
 
-
-
-//  main
 }

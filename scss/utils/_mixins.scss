@@ -20,9 +20,9 @@
           content: "\f004";
           font-size: 1.5rem;
           right: 1rem;
-          top: 0%;
+           top: 0%;
           margin-right: 22px;
-          padding-top: 0.6rem;
+          padding-top: 0.9rem;
           color: inherit;
           @include gradient;
           background-clip: text;
@@ -62,5 +62,23 @@
     transform: scale(1.02);
    transition: all 80ms ease-in;   
    opacity: 0.9;
+  }
+}
+
+@mixin mobile {
+  @media screen and (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktoplarge}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$breakpoint-desktop}) {
+    @content;
   }
 }
