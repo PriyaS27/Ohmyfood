@@ -15,7 +15,7 @@ Troisième projet de la formation "Intégrateur Web" chez OpenClassroom.Le site 
 
 ---
 
-###Animations demandées
+#Animations demandées
 
 * Loading spinner au chargement de l'index
 * Style des boutons au survol
