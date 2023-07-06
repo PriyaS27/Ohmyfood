@@ -103,6 +103,9 @@ main .city input {
   }
 }
 @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
   to {
     transform: rotate(360deg);
   }
@@ -194,15 +197,15 @@ header {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   #homepage .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-#homepage .menus .menus__cards .new {
+#homepage .menus .menus__cards .card__new {
   position: relative;
 }
-#homepage .menus .menus__cards .new::before {
+#homepage .menus .menus__cards .card__new::before {
   content: "Nouveau";
   position: absolute;
   background-color: #99E2D0;
@@ -221,11 +224,6 @@ header {
   background-size: cover;
   background-position: center;
   border-radius: 1rem 1rem 0 0;
-}
-@media screen and (min-width: 1024px) {
-  #homepage .menus .card__image {
-    height: 24rem;
-  }
 }
 #homepage .menus .card__image-1 {
   background-image: url("../assets/image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -322,16 +320,17 @@ footer .footer__title {
 }
 footer .footer__list {
   padding: 0.3rem;
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 400;
   list-style-type: none;
+}
+footer .footer__elt {
+  margin-bottom: 8px;
+  font-family: "Roboto";
 }
 footer .fa-solid {
   margin-right: 0.5rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .footer__title {
     position: absolute;
     right: 0;
@@ -342,6 +341,19 @@ footer .fa-solid {
     display: flex;
     justify-content: center;
     gap: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px -1px) {
+  .footer__title {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+    margin-top: 17px;
+  }
+  .footer__list {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
   }
 }
 @keyframes appear {
@@ -578,7 +590,7 @@ footer .fa-solid {
   }
 }
 #page-resto section.order {
-  height: 25vh;
+  height: 20vh;
   display: grid;
   place-items: center;
 }

@@ -1,9 +1,8 @@
 @import  "../utils/_variables.scss";
 @import  "../utils/_mixins.scss";
 
-
   #homepage{
-    
+    @include mobile;
     .menus{
       background-color: #f7f7f7;
       margin-bottom: 2rem;
@@ -17,15 +16,15 @@
       }
       .menus__cards{
         display: grid;
-        grid-template-columns:repeat(2, 1fr) ;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        @media (max-width: $breakpoint-desktop) {
-          grid-template-columns:repeat(1, 1fr) ;
+        @media (max-width: 1000px){
+          grid-template-columns: repeat(1, 1fr) ;
         }
-        .new {
+        .card__new {
           position: relative;
         }
-        .new::before {
+        .card__new::before {
           content:"Nouveau";
           position: absolute;
           background-color:$color-tertiary;
@@ -44,14 +43,9 @@
       .card{
           &__image{
             height: 14rem;
-            @include desktop{
-                height: 24rem;
-            }
-
             background-size: cover;
             background-position: center;
             border-radius: 1rem 1rem 0 0; 
-            
           }
           &__image-1{
             background-image: url("../assets/image/jay-wennington-N_Y88TWmGwA-unsplash.jpg");

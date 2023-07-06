@@ -29,13 +29,12 @@
           -webkit-background-clip: text;
           opacity: 1;
           transition: all 200ms ease-in-out;
-          
 }
 @mixin heart-animated{
     &::before{
         @include heart;
       }
-      &::after{
+      &::after{      
         @include heart;
         @include gradient;
         opacity: 0;
@@ -66,19 +65,17 @@
 }
 
 @mixin mobile {
-  @media screen and (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }
-
 @mixin tablet {
-  @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktoplarge}) {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop -1px}) {
     @content;
   }
 }
-
 @mixin desktop {
-  @media screen and (min-width: #{$breakpoint-desktop}) {
+  @media (min-width: #{$breakpoint-desktop}) {
     @content;
   }
 }

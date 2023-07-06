@@ -1,37 +1,38 @@
 @import  "../utils/_colors.scss";
+@import  "../utils/_mixins.scss";
 
 footer{
     background-color: $darkgrey;
     padding:1rem 2rem;
     color:white;
-
+    
     & .footer__title{
-        font-family: 'Shrikhand';
-        font-style: italic;
-        font-weight: 500;
-        font-size: 18px;
-        margin: 0 16px 16px 0;
-       }
-       & .footer__list{
-         padding: 0.3rem;
-         font-family: 'Roboto';
-        font-size: 16px;
-        font-weight: 400;
+      font-family: 'Shrikhand';
+      font-style: italic;
+      font-weight: 500;
+      font-size: 18px;
+      margin: 0 16px 16px 0;
+    }
+    & .footer__list{
+        padding: 0.3rem;
         list-style-type: none;
+      }
+      & .footer__elt{
+        margin-bottom: 8px;
+        font-family: 'Roboto';
        }
        & .fa-solid{
         margin-right: 0.5rem;
-
        }
 }
-@include  desktop{
-    // @media screen and (min-width:$breakpoint-tablet) and  (max-width: $breakpoint-desktoplarge){ 
+@include  desktop {
+    // @media screen and (min-width:$breakpoint-tablet) and  (max-width: $breakpoint-desktop){ 
       .footer__title {
         position: absolute;
         right:0;
         margin-right: 50px; 
         margin-top: 17px;
-    }
+       }
        .footer__list {
       display: flex;
       justify-content: center;
@@ -40,4 +41,21 @@ footer{
    }
   // }
 
-  
+  @include tablet {
+        
+    .footer__title {
+       position: absolute;
+      right:0;
+      margin-right: 50px; 
+      margin-top: 17px;
+     }
+     .footer__list {
+     display: flex;
+     justify-content: left;
+     gap:15px;
+  }
+}
+
+
+
+

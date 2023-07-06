@@ -4,7 +4,7 @@
 
 
 #page-resto{
-     
+    @include mobile;
     header{
             &::before{
             @include fontawesome;
@@ -27,10 +27,9 @@
     }
     .resto__title 
     {
-        
         position: relative;
         @include desktop{
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: $breakpoint-desktop){
             margin-left: 40px;
             margin-right: 40px;
         }
@@ -53,10 +52,10 @@
         background-color: $lighter-grey;
         padding: 0 1rem;
         @include desktop{
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: $breakpoint-desktop){
             margin-left: 40px;
             margin-right: 40px;
-        }
+             }
         }
     }
     h3{
@@ -80,7 +79,7 @@
         grid-template-columns:repeat(3, 1fr);
         gap: 1rem;
         margin-bottom: 8px;
-       @media (max-width: $breakpoint) {
+       @media (max-width: $breakpoint-desktop) {
         grid-template-columns:repeat(1, 1fr) ;
         }  
         .menus__category 
@@ -91,20 +90,20 @@
             overflow: hidden;
             .menu-item 
             {
+                //for animation
                 @for $i from 1 through 9 {
                     &.delay-#{$i} {
                         animation-delay: 100ms * $i;
                         }
                     }   
-                    animation: appear 1s;
-                    animation-fill-mode: both;
+                animation: appear 1s;
+                animation-fill-mode: both;
                 margin: 4px;
                 display: flex;
                 border-radius: 1rem;
                 overflow: hidden;
                 box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
                 background-color: white;
-                //for animation
             .menu-item__price {
                  margin-left: auto; 
                 font-weight: 700;
@@ -121,7 +120,6 @@
                         white-space: nowrap;
                         text-overflow: ellipsis;
                     }
-
                 }    
             .menu-item__check{
                     display: grid;
@@ -155,7 +153,7 @@
     }
 }
     section.order{
-        height: 25vh;
+        height: 20vh;
         display: grid;
         place-items: center;
         button{
